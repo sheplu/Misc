@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1292494451 source:d:\code block\tp_supinfo\tp-c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"initialisation.h"
+	"heredite.h"
+	"chiffrage.h"
+
+1292489375 d:\code block\tp_supinfo\tp-c\initialisation.h
+
+1292493992 source:d:\code block\tp_supinfo\tp-c\initialisation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"initialisation.h"
+
+1292493619 source:d:\code block\tp_supinfo\tp-c\heredite.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"heredite.h"
+
+1292431242 d:\code block\tp_supinfo\tp-c\heredite.h
+
+1292493616 source:d:\code block\tp_supinfo\tp-c\chiffrage.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"chiffrage.h"
+
+1292492471 d:\code block\tp_supinfo\tp-c\chiffrage.h
+
