@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="{{ asset('bundles/ntssupinfo/css/style.css') }}" type="text/css" media="screen" />
+
+    <title>{% block title %}Note Ton Sta{% endblock %}</title>
+</head>
+<body>
+    <div id="header">
+
+    </div>
+
+    <div id="menu">
+        <div class="element_menu">
+            <h3>Note ton sta</h3>
+            <ul>
+                <li><a href="{{ path('Supinfo_accueil') }}">Accueil du blog</a></li>
+                <li><a href="{{ path('Supinfo_intervention') }}">Voir les interventions</a></li>
+                <li><a href="{{ path('Supinfo_inscription') }}">inscription</a></li>
+                <li><a href="{{ path('Supinfo_connexion') }}">connexion</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="corps">
+
+        {% block body %}
+        {% endblock %}
+
+    </div>
+
+    <div id="pied_de_page">
+        <p>
+            Footer - No copyright - Super design :) <br />
+            Mini projet de php B2
+        </p>
+    </div>
+
+</body>
+</html>

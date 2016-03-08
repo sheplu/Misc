@@ -1,0 +1,28 @@
+{% extends "NtsSupinfoBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Intervention{% endblock %}
+
+{% block body %}
+Vous êtes sur la page de l'intervention n° {{ entity.id }} concernant {{ entity.Subject}}
+
+<div id="intervention">
+    <p>
+        Information de l'intervention: <br />
+        <ul>
+            <li>Id:  {{ entity.id }}</li>
+            <li>Campus:  {{ entity.campusid }}</li>
+            <li>Sta:  {{ entity.staid }}</li>
+            <li>Subject:  {{ entity.Subject }}</li>
+            <li>Start:  {{ entity.start|date('Y-m-d')}}</li>
+            <li>Begin:  {{ entity.end|date('Y-m-d') }}</li>
+            <li>Status:  {{ entity.Status }}</li>
+        </ul>
+
+    Noter !
+
+
+    </p>
+</div>
+
+
+{% endblock %}

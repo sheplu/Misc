@@ -1,0 +1,38 @@
+intervention:
+    pattern:  /
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:index" }
+
+intervention_display:
+    pattern:  /display
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:display" }
+
+intervention_list:
+    pattern:  /myintervention
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:list" }
+
+intervention_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:show" }
+
+intervention_new:
+    pattern:  /new
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:new" }
+
+intervention_create:
+    pattern:  /create
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:create" }
+    requirements: { _method: post }
+
+intervention_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:edit" }
+
+intervention_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:update" }
+    requirements: { _method: post }
+
+intervention_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "NtsSupinfoBundle:Intervention:delete" }
+    requirements: { _method: post }

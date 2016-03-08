@@ -1,0 +1,29 @@
+Supinfo_accueil:
+    pattern:  /index
+    defaults: { _controller: NtsSupinfoBundle:Supinfo:index }
+
+Supinfo_intervention:
+    pattern:  /index/intervention
+    defaults: { _controller: NtsSupinfoBundle:Supinfo:intervention }
+
+Supinfo_connexion:
+    pattern:  /index/connexion
+    defaults: { _controller: NtsSupinfoBundle:Supinfo:connexion }
+
+Supinfo_inscription:
+    pattern:  /index/inscription
+    defaults: { _controller: NtsSupinfoBundle:Supinfo:inscription }
+
+Supinfo_Show_Intervention:
+    pattern:  /index/intervention/{id}
+    defaults: { _controller: NtsSupinfoBundle:Supinfo:voir }
+    requirements:
+            id:  \d+
+
+Nts_crud:
+    resource: routing/intervention.yml
+    prefix:   /sta
+
+Supinfo_logout:
+    pattern:  /index/sta/logout
+    defaults: { _controller: NtsSupinfoBundle:Sta:logout }

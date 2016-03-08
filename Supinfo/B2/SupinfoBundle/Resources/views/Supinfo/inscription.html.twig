@@ -1,0 +1,46 @@
+{% extends "NtsSupinfoBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Inscription{% endblock %}
+
+{% block body %}
+Pour devenir STA c'est simple : Inscrivez Vous !! <br />
+<form action="{{ path('Supinfo_inscription') }}" method="post" {{ form_enctype(form) }}>
+
+    <fieldset>
+    <table>
+    {{ form_errors(form) }}
+
+    <legend> Informations personnelles </legend>
+    <tr>
+        <td>{{ form_label(form.Firstname, "Firstname") }}</td>
+        <td>{{ form_widget(form.Firstname) }}</td>
+        <td>{{ form_errors(form.Firstname) }}</td>
+    </tr>
+
+
+    <tr>
+        <td>{{ form_label(form.Lastname, "Lastname") }}</td>
+        <td>{{ form_widget(form.Lastname) }}</td>
+        <td>{{ form_errors(form.Lastname) }}</td>
+    </tr>
+
+    <tr>
+        <td>{{ form_label(form.Email, "Email") }}</td>
+        <td>{{ form_widget(form.Email) }}</td>
+        <td>{{ form_errors(form.Email) }}</td>
+    </tr>
+
+    <tr>
+        <td>{{ form_label(form.Password, "Password") }}</td>
+        <td>{{ form_widget(form.Password) }}</td>
+        <td>{{ form_errors(form.Password) }}</td>
+    </tr>
+
+    </table>
+    </fieldset>
+    {{ form_rest(form) }}
+
+    <input type="submit" />
+</form>
+
+{% endblock %}

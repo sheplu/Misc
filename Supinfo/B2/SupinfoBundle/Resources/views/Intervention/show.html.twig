@@ -1,0 +1,52 @@
+{% extends "NtsSupinfoBundle::sta-layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block body %}
+<h1>Intervention</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Subject</th>
+            <td>{{ entity.subject }}</td>
+        </tr>
+        <tr>
+            <th>Start</th>
+            <td>{{ entity.start|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>End</th>
+            <td>{{ entity.end|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ entity.status }}</td>
+        </tr>
+        <tr>
+            <th>Sta_id</th>
+            <td>{{ entity.staid }}</td>
+        </tr>
+        <tr>
+            <th>Campus_id</th>
+            <td>{{ entity.campusid }}</td>
+        </tr>
+        <tr>
+            <th>Active</th>
+            <td>{{ entity.active }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('intervention') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

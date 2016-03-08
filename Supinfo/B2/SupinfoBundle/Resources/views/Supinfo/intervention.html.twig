@@ -1,0 +1,33 @@
+{% extends "NtsSupinfoBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Intervention{% endblock %}
+
+{% block body %}
+Vous êtes sur la page qui liste toutes les interventions.
+
+<h1>Sta list</h1>
+
+<table class="records_list">
+    <thead>
+    <tr>
+        <th>Subject</th>
+        <th>Begin</th>
+        <th>End</th>
+        <th>Status</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+    <tr>
+        <td>{{ entity.subject }}</td>
+        <td>{{ entity.start|date('Y-m-d') }}</td>
+        <td>{{ entity.end|date('Y-m-d') }}</td>
+        <td>{{ entity.Status }}</td>
+        <td><a href="{{ path('Supinfo_Show_Intervention', { 'id': entity.id }) }}">show</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

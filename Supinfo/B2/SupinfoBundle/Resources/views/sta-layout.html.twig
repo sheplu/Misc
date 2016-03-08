@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="{{ asset('bundles/ntssupinfo/css/style.css') }}" type="text/css" media="screen" />
+
+    <title>{% block title %}Note Ton Sta{% endblock %}</title>
+</head>
+<body>
+
+    <div id="headersta">
+
+    </div>
+
+<div id="menu">
+    <div class="element_menu">
+        <h3>Note ton sta: Welcome {{ app.session.flash('STA') }}</h3>
+        <ul>
+            <li><a href="{{ path('intervention') }}">Accueil du blog</a></li>
+            <li><a href="{{ path('intervention_display') }}">Afficher interventions</a></li>
+            <li>Modifier interventions</li>
+            <li><a href="{{ path('intervention_new') }}">Ajouter interventions</a></li>
+            <li><a href="{{ path('Supinfo_logout') }}">Logout</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="corps">
+
+    {% block body %}
+    {% endblock %}
+
+</div>
+
+<div id="pied_de_page">
+    <p>FOOTER - Pas de Copyright 2011, aucun droit réservé</p>
+</div>
+
+</body>
+</html>
