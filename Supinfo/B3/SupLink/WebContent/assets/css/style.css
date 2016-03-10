@@ -1,0 +1,5 @@
+body  {width:500px;margin:auto;}
+
+table {border:1px solid grey;}
+table thead {background-color: whitesmoke}
+table td { border:1px solid grey ;padding:5px;}
