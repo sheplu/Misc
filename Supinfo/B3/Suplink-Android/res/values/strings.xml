@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Suplink</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Bienvenue sur Suplink!</string>
+    <string name="Button_login">Login</string>
+    <string name="title_activity_dash">DashActivity</string>
+    <string name="title_activity_stat">StatActivity</string>
+
+</resources>
