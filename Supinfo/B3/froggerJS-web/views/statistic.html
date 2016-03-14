@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+	<table class="table table-striped table-hover table-condensed">
+	    <caption>Games' list</caption>
+	    <thead>
+		    <tr>
+			    <th>Result</th>
+			    <th>Lilies</th>
+			    <th>Time</th>
+			    <th>Best</th>
+		    </tr>
+	    </thead>
+		<tbody>
+	    	{% for stat in stats %}
+				<tr {% if stat.result == "win" %} class="success"{% else %} class="error" {% endif %}>
+					<td>{{stat.result}}</td>
+					<td>{{stat.lilies}}</td>
+					<td>{{stat.time}}</td>
+					<td>{{stat.best}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+    </table>
+{% endblock %}
+

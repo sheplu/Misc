@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title> {% block title %}{% endblock %} - FroggerJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    {% block css %}{% endblock %}
+    {% block js %}{% endblock %}
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="./">FroggerJS</a>
+              <div class="nav-collapse">
+                <ul class="nav">
+                  {% if !req.session.userId %}
+                  <li><a href="./"><i class="icon-home icon-white"></i> Home</a></li>
+                  <li><a href="/register"><i class="icon-plus-sign icon-white"></i> Register</a></li>
+                  {% else %}
+                    <li><a href="./dashboard"><i class="icon-home icon-white"></i> Dashboard</a></li>
+                    <li><a href="/statistic"><i class="icon-star icon-white"></i> Statistics</a></li>
+                    <li><a href="/play"><i class="icon-play icon-white"></i> Play</a></li>
+                    <li><a href="/user"><i class="icon-user icon-white"></i> User</a></li>
+                  {% endif %}
+                </ul>
+                  {% if !req.session.userId %}
+                  <form class="navbar-form pull-right" action="/login" method="post">
+                    <input type="text" class="input-small" name="mail" placeholder="Email">
+                    <input type="password" class="input-small" name="password" placeholder="Password">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+                  {% else %}
+                    <a href="/logout" class="btn btn-primary pull-right"><i class="icon-off icon-white"></i> Logout</a>
+                  {% endif %}
+              </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+          </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->
+
+    <div class="container">
+        <div class="page-header">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+
+</body>
+</html>

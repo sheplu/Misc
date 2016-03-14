@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    {% if {{ error }} %}
+    <div class="alert alert-error">
+        {{ error }}
+    </div>
+    {% endif %}
+    {% if {{ success }} %}
+    <div class="alert alert-success">
+        {{ success }}
+    </div>
+    {% endif %}
+    <form class="form-horizontal" action="/register" method="post">
+        <div class="control-group">
+            <label class="control-label" for="mail">Email</label>
+            <div class="controls">
+                <input type="email" id="mail" name="mail" placeholder="Email">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary"><i class="icon-plus icon-white"></i> Register</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

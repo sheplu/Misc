@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block js %}
+	<!--[if lt IE 9]>
+        <script type="text/javascript" src="javascripts/frog/excanvas.compiled.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="javascripts/frog/json2.js"></script>
+	<script type="text/javascript" src="javascripts/frog/oXHR.js"></script>
+	<script type="text/javascript" src="javascripts/frog/classes/Tileset.js"></script>
+	<script type="text/javascript" src="javascripts/frog/classes/Map.js"></script>
+	<script type="text/javascript" src="javascripts/frog/classes/Character.js"></script>
+    <script type="text/javascript" src="javascripts/frog/classes/Car.js"></script>
+    <script type="text/javascript" src="javascripts/frog/classes/Lily.js"></script>
+    <script type="text/javascript" src="javascripts/frog/classes/Wood.js"></script>
+	<script type="text/javascript" src="javascripts/frog/rpg.js"></script>
+{% endblock %}
+
+{% block content %}
+	<canvas id="canvas"></canvas>
+	<form class="form-horizontal" action="/play" method="post" id="form" style="display:none;">
+        <div class="control-group">
+            <label class="control-label" for="result">Result</label>
+            <div class="controls">
+                <input type="text" id="result" name="result" placeholder="result">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="lilies">Water lilies</label>
+            <div class="controls">
+                <input type="text" id="lilies" name="lilies" placeholder="lilies">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="time">Time</label>
+            <div class="controls">
+                <input type="text" id="time" name="time" placeholder="time">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="best">Best</label>
+            <div class="controls">
+                <input type="text" id="best" name="best" placeholder="best">
+            </div>
+        </div>
+        <div class="control-group" id="formbutton">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary"><i class="icon-plus icon-white"></i> Send Data</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
