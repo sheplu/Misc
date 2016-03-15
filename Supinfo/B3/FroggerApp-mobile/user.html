@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr" manifest="/cache.manifest">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>FroggerApp</title>
+	<meta name="author" content="Jean Burellier" />
+	<link rel="stylesheet" href="jquery.mobile.min.css" />
+	<script src="jquery.min.js"></script>
+	<script src="jquery.mobile.min.js"></script>
+	<script type="text/javascript">
+	window.onload = function () {
+		$.ajax({
+	        url: 'http://localhost:3000/users',
+	        datatype: 'json',
+	        success: function(data) {
+	            console.log("succes");
+	        },
+	        error: function(data) {
+	            console.log("error");
+	        },
+	    });
+	}
+	</script>
+</head>
+
+<body>
+	<div data-role="page">
+		<div data-role="header" data-theme="a">
+		  	<h1>FroggerApp</h1>
+		</div>
+		<div data-role="content">	
+	  		<p>
+	  			Liste des utilisateurs
+	  		</p>
+	  
+			<ul data-role="listview" data-inset="true">
+			   <li>
+			      <a href="" data-transition="slide">
+			      	<h3></h3>
+			      </a>
+			   </li>
+			</ul>
+		</div>
+
+		<footer data-role="footer" role="contentinfo">
+			<p class="center">Powered by Jquery Mobile</p> 
+		</footer> 
+	</div>
+</body>
+
+</html>
