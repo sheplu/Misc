@@ -1,0 +1,5 @@
+c:\users\shep\documents\visual studio 2010\Projects\TpSupinfo\TpSupinfo\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\shep\documents\visual studio 2010\Projects\TpSupinfo\TpSupinfo\bin\Debug\TpSupinfo.exe
+c:\users\shep\documents\visual studio 2010\Projects\TpSupinfo\TpSupinfo\bin\Debug\TpSupinfo.pdb
+c:\users\shep\documents\visual studio 2010\Projects\TpSupinfo\TpSupinfo\obj\x86\Debug\TpSupinfo.exe
+c:\users\shep\documents\visual studio 2010\Projects\TpSupinfo\TpSupinfo\obj\x86\Debug\TpSupinfo.pdb
